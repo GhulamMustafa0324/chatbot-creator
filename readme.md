@@ -36,7 +36,7 @@ It allows users to register, log in, create chatbots, upload knowledge bases, an
 
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone https://github.com/GhulamMustafa0324/chatbot-creator
    cd flask_chatbot
     ```
 
