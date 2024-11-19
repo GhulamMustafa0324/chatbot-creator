@@ -1,0 +1,11 @@
+Flask
+Flask-WTF
+Flask-SQLAlchemy
+Flask-Login
+transformers
+langchain
+langchain-community
+chromadb
+unstructured
+sentence-transformers
+werkzeug

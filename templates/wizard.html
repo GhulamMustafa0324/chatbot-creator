@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Chatbot Wizard</h2>
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="step" value="{{ request.args.get('step', 1) }}">
+    {% if request.args.get('step', '1') == '1' %}
+    <input type="text" name="name" placeholder="Chatbot Name" required>
+    <textarea name="description" placeholder="Description" required></textarea>
+    <button type="submit">Next</button>
+    {% elif request.args.get('step') == '2' %}
+    <textarea name="personality" placeholder="Personality Setup" required></textarea>
+    <button type="submit">Next</button>
+    {% elif request.args.get('step') == '3' %}
+    <input type="file" name="file" required>
+    <button type="submit">Finish</button>
+    {% endif %}
+</form>
+{% endblock %}

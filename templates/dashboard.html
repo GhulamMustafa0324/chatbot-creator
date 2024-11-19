@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>Total Chatbots: {{ chatbots|length }}</p>
+<ul>
+    {% for bot in chatbots %}
+    <li>{{ bot.name }} (Created on {{ bot.creation_date }})</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('wizard') }}">Create New Chatbot</a>
+{% endblock %}
